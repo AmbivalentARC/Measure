@@ -18,7 +18,7 @@ export class Length extends Measurement<Length>() {
     return {
       metric: {
         unit: "m",
-        ratio: new Decimal(3.28084).toNumber()
+        ratio: 3.28084
       },
       imperial: {
         unit: "ft",
