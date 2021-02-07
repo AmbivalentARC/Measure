@@ -1,9 +1,16 @@
 {
-  "name": "typescript",
+  "name": "Measure",
   "version": "0.0.0",
   "private": true,
+  "scripts": {
+    "serve": "parcel index.html"
+  },
   "dependencies": {
     "decimal.js": "^10.2.1",
+    "eruda": "^2.4.1",
     "lodash": "^4.17.20"
+  },
+  "devDependencies": {
+    "typescript": "^4.1.3"
   }
 }

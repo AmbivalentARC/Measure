@@ -150,7 +150,7 @@ function Measurement<T>() {
             : new Decimal(val)
                 [this.valueFormat[0]](
                   this.valueFormat[1],
-                  Decimal.ROUND_HALF_EVEN
+                  Decimal.ROUND_HALF_ODD
                 )
                 .toString();
         const u =
@@ -164,6 +164,14 @@ function Measurement<T>() {
         return [v, u];
       });
     };
+    public toPrint2(options?:{valueFormat?:[ValueFormat, integer],unitFormat?:UnitFormat}):[string,string][]{
+     const {unitFormat,valueFormat} = options || {}
+     console.log(101,unitFormat,valueFormat)
+      this.unitFormat = !!unitFormat ? unitFormat : "id"
+      this.valueFormat = !!valueFormat? valueFormat : ["toSD",9]
+      console.log(102,this.unitFormat,this.valueFormat)
+      return this.toPrint()
+    }
 
     public static unitsImperialToArray = function(): string[] {
       return Object.keys(this.imperial);

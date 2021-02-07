@@ -94,3 +94,8 @@ const f = Measure.Mass(
 );
 f.printOptions.unit("name").value("toSD", 3);
 console.log({ f }, f.toPrint());
+console.log("hello") 
+console.log(Measure.Length(23,"cm").convertTo("mm"))
+var t = Measure.Area([1,2,3,4.99,5,5.16,7,8,9,10],"cm2").convertTo("m2").toPrint2({valueFormat:["toDP",3],unitFormat:"name"})
+
+console.log(2,t,4)
